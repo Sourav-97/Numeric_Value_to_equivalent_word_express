@@ -14,11 +14,8 @@ void NumericToStingAmount(int);
  	  printf("Enter Amount: ");
  	  cin>> amount;
  	  NumericToStingAmount(amount);
-	   
-		 getch();
-		
-    
- 	return 0;
+	  getch();
+	  return 0;
  }
  void NumericToStingAmount(int amount)
  {
@@ -49,66 +46,58 @@ void NumericToStingAmount(int);
          
          while(len>=0)
              {
-             
-				            if(len==9)
-							  {
-							  	if(arry[len-1]==1)
-						       	{
-						       	  printf(" %s %s ",tens_place[arry[len-2]],tens_power[len-2]);
-							    }
-								if(arry[len-1]>=2)
-					               {
-								    printf( " %s %s %s ",tens_multiple[arry[len-1]],single_digit[arry[len-2]],tens_power[len-2]);
-				                   }
-								len=len-2;
-				              }else if(len==8)
-					                {
-									 printf(" %s %s ",single_digit[arry[len-1]],tens_power[len-1]);
-				 
-			                        }
-             	
-						 
-						 
-						 
-						  if(len==7)
-							  {
-							  	if(arry[len-1]==1)
-						       	{
-								 printf(" %s %s ",tens_place[arry[len-2]],tens_power[len-2]);
-							    }else if(arry[len-1]!=0)
-					               {
-								    printf( " %s %s %s ",tens_multiple[arry[len-1]],single_digit[arry[len-2]],tens_power[len-2]);
-				                   }
-								len=len-2;
-				              }else if(len==6)
-					                {
-									 printf(" %s %s ",single_digit[arry[len-1]],tens_power[len-1]);
-				 
-			                        }
-				 
-				 
-				  if(len==5&&arry[len-1]!=0&&arry[len-2]!=0)
-				           {
-				       	    if(arry[len-1]==1)
-				       	      {
-				       	       printf("%s  %s ",tens_place[arry[len-2]],tens_power[len-2]);	
-						      }
-						      else{
-						      	   printf("%s %s %s ",tens_multiple[arry[len-1]],single_digit[arry[len-2]],tens_power[len-2]);
-							      }
-					       len=len-2;
-						   }
-              
-			  
-			  
-			  
-			  if(len==4&&arry[len-1]!=0)
-			    {
-			     printf("%s ",single_digit[arry[len-1]]);
-         	     printf("%s ",tens_power[len-1]);
+                if(len==9)
+		 {
+	           if(arry[len-1]==1)
+		     {
+		      printf(" %s %s ",tens_place[arry[len-2]],tens_power[len-2]);
+		     }
+		   if(arry[len-1]>=2)
+		    {
+		    printf( " %s %s %s ",tens_multiple[arry[len-1]],single_digit[arry[len-2]],tens_power[len-2]);
+		    }
+		   len=len-2;
+	        } 
+	      if(len==8)
+	         {
+		   printf(" %s %s ",single_digit[arry[len-1]],tens_power[len-1]);
+		 }
+              if(len==7)
+		 {
+		  if(arry[len-1]==1)
+		    {
+		     printf(" %s %s ",tens_place[arry[len-2]],tens_power[len-2]);
+		    }
+		  else  if(arry[len-1]!=0)
+	                {
+			   printf( " %s %s %s ",tens_multiple[arry[len-1]],single_digit[arry[len-2]],tens_power[len-2]);
 		        }
-		      if(len==3&&arry[len-1]!=0)
-                {
+		   len=len-2;
+		 }
+		 else if(len==6)
+		      {
+			printf(" %s %s ",single_digit[arry[len-1]],tens_power[len-1]);
+		      }
+		if(len==5)
+		  {
+		    if(arry[len-1]==1)
+		      {
+			 printf(" %s %s ",tens_place[arry[len-2]],tens_power[len-2]);
+		      }
+		    else if(arry[len-1]!=0)
+			  {
+			    printf( " %s %s %s ",tens_multiple[arry[len-1]],single_digit[arry[len-2]],tens_power[len-2]);
+			  }
+			len=len-2;
+		   }
+              
+		  if(len==4&&arry[len-1]!=0)
+		     {
+		     printf("%s ",single_digit[arry[len-1]]);
+         	     printf("%s ",tens_power[len-1]);
+		     }
+		  if(len==3&&arry[len-1]!=0)
+                     {
          	     printf("%s ",single_digit[arry[len-1]]);
          	     printf("%s ",tens_power[len-1]);
          	    }
@@ -130,9 +119,9 @@ void NumericToStingAmount(int);
 						      else{
 						      	   printf("%s %s",tens_multiple[arry[1]],single_digit[arry[0]]);
 							      }
-					        break;
-						   }
-			 if(len==1)	
+		     break;
+		   }
+		   if(len==1)	
 			    {
 			    	printf("%s ",single_digit[arry[0]]);
 			    }
